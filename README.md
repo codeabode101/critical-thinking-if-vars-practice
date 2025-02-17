@@ -109,8 +109,7 @@ d) 4
 
 ## Part 2: Code Correction  
 
-<details>
-<summary><strong>Fix the Airlock Security System</strong></summary>
+**Fix the Airlock Security System**
 
 The code grants access if the user is "ADMIN" or has ID 777. **It’s broken!**  
 ```python
@@ -122,29 +121,12 @@ else:
     print("INTRUDER ALERT")
 ```
 
-<details>
-<summary><em>Answer & Explanation</em></summary>
-
-**Fixed Code:**  
-```python
-role = input("Role: ")
-id = int(input("ID: "))  # Cast input to int
-if role == "ADMIN" or id == 777:
-    print("ACCESS GRANTED")
-else:
-    print("INTRUDER ALERT")
-```
-
-**Mistake:** `id` is a string; comparing to `777` (int) always fails.  
-</details>
-</details>
 
 ---
 
 ## Part 3: Write Code  
 
-<details>
-<summary><strong>Alien Math Test</strong></summary>
+**Alien Math Test**
 
 Write a program that:  
 1. Asks for an integer.  
@@ -152,17 +134,3 @@ Write a program that:
 3. If **even and ≤ 50**, print "SAFE".  
 4. Otherwise, print "ERROR".  
 
-<details>
-<summary><em>Sample Solution</em></summary>
-
-```python
-num = int(input("Enter integer: "))
-if num % 2 != 0 and num > 50:
-    print("ALIEN ENERGY")
-elif num % 2 == 0 and num <= 50:
-    print("SAFE")
-else:
-    print("ERROR")
-```
-</details>
-</details>
